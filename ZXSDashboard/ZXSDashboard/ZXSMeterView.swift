@@ -24,6 +24,7 @@ class ZXSMeterView: UIView {
         addSubview(progressView)
     }
     
+    
     private lazy var numberView: ZXSNumberView = {
         let numberView = ZXSNumberView()
         numberView.frame = CGRectMake(0, 0, 150, 150)
@@ -31,7 +32,7 @@ class ZXSMeterView: UIView {
         return numberView
     }()
     
-    private lazy var progressView: ZXSProgressView = {
+    lazy var progressView: ZXSProgressView = {
         let progressView = ZXSProgressView()
         progressView.backgroundColor = UIColor.clearColor()
         progressView.frame = CGRectMake(0, 0, 150, 150)

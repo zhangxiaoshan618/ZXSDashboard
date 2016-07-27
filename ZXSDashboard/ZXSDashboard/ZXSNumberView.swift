@@ -73,10 +73,5 @@ class ZXSNumberView: UIView {
             line.center = CGPointMake(radiu, radiu)
             line.transform = CGAffineTransformRotate(line.transform, CGFloat(Double(i) * M_PI_4))
         }
-        
-
     }
-
-
-
 }

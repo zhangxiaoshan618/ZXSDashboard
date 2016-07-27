@@ -9,6 +9,13 @@
 import UIKit
 
 class ZXSProgressView: UIView {
+    
+    var value:CGFloat = 0.00 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
 
     override func drawRect(rect: CGRect) {
         
@@ -18,7 +25,7 @@ class ZXSProgressView: UIView {
         UIColor.yellowColor().set()
         path0.fill()
         
-        let path1 = UIBezierPath(arcCenter: center, radius: radiu, startAngle: CGFloat(-M_PI_2), endAngle:CGFloat(M_PI), clockwise: true)
+        let path1 = UIBezierPath(arcCenter: center, radius: radiu, startAngle: CGFloat(-M_PI_2), endAngle:CGFloat(Double(value) * M_PI - M_PI_2), clockwise: true)
         path1.addLineToPoint(center)
         UIColor.blueColor().set()
         path1.fill()
@@ -26,7 +33,5 @@ class ZXSProgressView: UIView {
         let path3 = UIBezierPath(arcCenter: center, radius: radiu - 10, startAngle: CGFloat(-M_PI_2), endAngle:CGFloat(2 * M_PI), clockwise: true)
         UIColor.whiteColor().set()
         path3.fill()
-        
     }
-
 }
