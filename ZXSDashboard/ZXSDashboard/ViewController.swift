@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         view.addSubview(meterView)
         
+        view.addSubview(sectionView)
+        
         
     }
     
@@ -54,12 +56,20 @@ class ViewController: UIViewController {
         return meterView
     }()
     
+    private lazy var sectionView: ZXSSectionView = {
+        let sectionView = ZXSSectionView(frame: CGRectMake(0, 200, 100, 100))
+        sectionView.backgroundColor = UIColor.whiteColor()
+        return sectionView
+    }()
+    
     
     private lazy var testVeiw: UIView = {
         let view = UIView(frame: CGRectMake(0, 0, 150, 150))
         view.backgroundColor = UIColor.blueColor()
         return view
     }()
+    
+    
 
 }
 
