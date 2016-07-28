@@ -11,6 +11,12 @@ import UIKit
 class ZXSSectionView: UIView {
 
     override func drawRect(rect: CGRect) {
+        // 外圆距离View的边界的宽度
+        let margin: CGFloat = 20.0
+        
+        // 刻度线的长度
+        let scaleLineLength: CGFloat = 5.0
+        
         // 圆心X
         let centerX = bounds.width * 0.5
         
@@ -18,7 +24,7 @@ class ZXSSectionView: UIView {
         let centerY = bounds.height * 0.5
         
         // 外圆的半径
-        let radiuOutsid = bounds.width * 0.5 - 20
+        let radiuOutsid = bounds.width * 0.5 - margin
         
         // 外圆和内圆之间的距离 
         let space: CGFloat = 5.0
@@ -32,6 +38,14 @@ class ZXSSectionView: UIView {
         
         let pointOutsidX = centerX - radiuOutsid * sin(CGFloat(M_PI) * 3.0 / 7.0)
         let pointOutsidY = centerY + radiuOutsid * cos(CGFloat(M_PI) * 3.0 / 7.0)
+        
+        // 计算 3/7 π 的时候刻度两端的坐标
+        let scaleInsideX = centerX - (radiuOutsid + 1) * sin(CGFloat(M_PI) * 3.0 / 7.0)
+        let scaleInsideY = centerY + (radiuOutsid + 1) * cos(CGFloat(M_PI) * 3.0 / 7.0)
+        
+        let scaleOutsidX = centerX - (radiuOutsid + 1 + scaleLineLength) * sin(CGFloat(M_PI) * 3.0 / 7.0)
+        let scaleOutsidY = centerY + (radiuOutsid + 1 + scaleLineLength) * cos(CGFloat(M_PI) * 3.0 / 7.0)
+        
         
         // 创建路径对象
         let pathGreen = UIBezierPath()
@@ -81,10 +95,24 @@ class ZXSSectionView: UIView {
         
         pathRed.stroke()
         
-//        let pathScale0 = UIBezierPath()
+        let pathScale = UIBezierPath()
         
+        pathScale.moveToPoint(CGPoint(x: centerX, y: centerY - radiuOutsid - 1))
+        pathScale.addLineToPoint(CGPoint(x: centerX, y: centerY - radiuOutsid - 1 - scaleLineLength))
         
+        pathScale.moveToPoint(CGPoint(x: centerX, y: centerY + radiuOutsid + 1))
+        pathScale.addLineToPoint(CGPoint(x: centerX, y: centerY + radiuOutsid + 1 + scaleLineLength))
         
+        pathScale.moveToPoint(CGPoint(x: scaleInsideX, y: scaleInsideY))
+        pathScale.addLineToPoint(CGPoint(x: scaleOutsidX, y: scaleOutsidY))
+        
+        pathScale.closePath()
+        
+        pathScale.lineWidth = 2
+        
+        UIColor.darkGrayColor().setStroke()
+        
+        pathScale.stroke()
     }
 
 }

@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     }()
     
     private lazy var sectionView: ZXSSectionView = {
-        let sectionView = ZXSSectionView(frame: CGRectMake(0, 200, 100, 100))
+        let sectionView = ZXSSectionView(frame: CGRectMake(0, 200, 150, 150))
         sectionView.backgroundColor = UIColor.whiteColor()
         return sectionView
     }()
