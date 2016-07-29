@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     func add() {
         sectionMeterView.hidden ?
             meterView.progressView.value < 1.5 ? meterView.progressView.value += 0.01 : stopLink() :
-            sectionMeterView.sectionProtressView.value < 450 ? sectionMeterView.sectionProtressView.value += 1 : stopLink()
+            sectionMeterView.sectionProtressView.value < 550 ? sectionMeterView.sectionProtressView.value += 1 : stopLink()
     }
     
     /// 停止定时器
