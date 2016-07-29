@@ -16,6 +16,7 @@
 		B385BB161D0F891E00422548 /* ZXSNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385BB131D0F891E00422548 /* ZXSNumberView.swift */; };
 		B385BB171D0F891E00422548 /* ZXSProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385BB141D0F891E00422548 /* ZXSProgressView.swift */; };
 		B3CC108E1D49B47F00E156AD /* ZXSSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC108D1D49B47F00E156AD /* ZXSSectionView.swift */; };
+		B3CC10901D49F1AE00E156AD /* ZXSSectionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC108F1D49F1AE00E156AD /* ZXSSectionProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B385BB131D0F891E00422548 /* ZXSNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSNumberView.swift; sourceTree = "<group>"; };
 		B385BB141D0F891E00422548 /* ZXSProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSProgressView.swift; sourceTree = "<group>"; };
 		B3CC108D1D49B47F00E156AD /* ZXSSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSSectionView.swift; sourceTree = "<group>"; };
+		B3CC108F1D49F1AE00E156AD /* ZXSSectionProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSSectionProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				B385BB131D0F891E00422548 /* ZXSNumberView.swift */,
 				B385BB141D0F891E00422548 /* ZXSProgressView.swift */,
 				B3CC108D1D49B47F00E156AD /* ZXSSectionView.swift */,
+				B3CC108F1D49F1AE00E156AD /* ZXSSectionProgressView.swift */,
 				B385BB041D0F88F300422548 /* Main.storyboard */,
 				B385BB071D0F88F300422548 /* Assets.xcassets */,
 				B385BB091D0F88F300422548 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			files = (
 				B385BB031D0F88F300422548 /* ViewController.swift in Sources */,
 				B385BB171D0F891E00422548 /* ZXSProgressView.swift in Sources */,
+				B3CC10901D49F1AE00E156AD /* ZXSSectionProgressView.swift in Sources */,
 				B3CC108E1D49B47F00E156AD /* ZXSSectionView.swift in Sources */,
 				B385BB151D0F891E00422548 /* ZXSMeterView.swift in Sources */,
 				B385BB011D0F88F300422548 /* AppDelegate.swift in Sources */,

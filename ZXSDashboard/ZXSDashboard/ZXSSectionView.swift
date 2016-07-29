@@ -12,7 +12,7 @@ class ZXSSectionView: UIView {
 
     override func drawRect(rect: CGRect) {
         // 外圆距离View的边界的宽度
-        let margin: CGFloat = 20.0
+        let margin: CGFloat = 30.0
         
         // 刻度线的长度
         let scaleLineLength: CGFloat = 5.0
@@ -113,6 +113,64 @@ class ZXSSectionView: UIView {
         UIColor.darkGrayColor().setStroke()
         
         pathScale.stroke()
+        
+        // 拿到要绘制的文字
+        let scale0: NSString = "0"
+        let scale350: NSString = "350"
+        let scale500: NSString = "500"
+        
+        // 设置绘制样式
+        let dict: [String: AnyObject] = [NSForegroundColorAttributeName : UIColor.darkGrayColor(),
+                                         NSFontAttributeName            : UIFont.systemFontOfSize(15)]
+        
+        // 绘制 - 绘制到指定的区域
+        scale0.drawAtPoint(CGPointMake(centerX - 5, centerY - radiuOutsid - 1 - scaleLineLength - 1 - 15), withAttributes: dict)
+        
+        scale350.drawAtPoint(CGPointMake(centerX - 15, centerY + radiuOutsid + 1 + scaleLineLength + 1), withAttributes: dict)
+        
+        scale500.drawAtPoint(CGPointMake(scaleOutsidX - 25, scaleOutsidY + 3), withAttributes: dict)
     }
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

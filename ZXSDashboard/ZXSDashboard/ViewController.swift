@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         view.addSubview(meterView)
         
         view.addSubview(sectionView)
+        view.addSubview(sectionProtressView)
         
         
     }
@@ -33,7 +34,9 @@ class ViewController: UIViewController {
     
     /// 没有到指定值的时候，每次角度增加0.01，到指定值移除定时器
     func add() {
-        meterView.progressView.value < 1.5 ? meterView.progressView.value += 0.01 : stopLink()
+//        meterView.progressView.value < 1.5 ? meterView.progressView.value += 0.01 : stopLink()
+        
+        sectionProtressView.value < 450 ? sectionProtressView.value += 1 : stopLink()
     }
     
     /// 停止定时器
@@ -62,6 +65,12 @@ class ViewController: UIViewController {
         return sectionView
     }()
     
+    
+    private lazy var sectionProtressView: ZXSSectionProgressView = {
+        let sectionProtressView = ZXSSectionProgressView(frame: CGRectMake(0, 200, 150, 150))
+        sectionProtressView.backgroundColor = UIColor.clearColor()
+        return sectionProtressView
+    }()
     
     private lazy var testVeiw: UIView = {
         let view = UIView(frame: CGRectMake(0, 0, 150, 150))
