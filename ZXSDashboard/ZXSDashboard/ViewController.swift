@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         self.link = link
     }
     
-    /// 没有到指定值的时候，每次角度增加0.01，到指定值移除定时器
+    /// 没有到指定值的时候，每次增加一定量的数值，到指定值移除定时器
     func add() {
         sectionMeterView.hidden ?
             meterView.progressView.value < 1.5 ? meterView.progressView.value += 0.01 : stopLink() :
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
             meterView.hidden = false
             
             startLink()
-        }
+        } 
     }
     
     
@@ -91,8 +91,5 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.blueColor()
         return view
     }()
-    
-    
-
 }
 
